@@ -1,8 +1,9 @@
 package com.codemybrainsout.onboarder.utils;
 
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.CardView;
 import android.view.View;
+
+import androidx.cardview.widget.CardView;
+import androidx.viewpager.widget.ViewPager;
 
 /**
  * Created by Rahul Juneja on 30-08-2016.
