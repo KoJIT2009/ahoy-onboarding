@@ -17,7 +17,7 @@ import androidx.cardview.widget.CardView;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
-public class AhoyOnboarderFragment extends Fragment {
+public class AhoyOnboarderAdapterFragment extends Fragment {
 
     private static final String AHOY_PAGE_TITLE = "ahoy_page_title";
     private static final String AHOY_PAGE_TITLE_RES_ID = "ahoy_page_title_res_id";
@@ -62,10 +62,10 @@ public class AhoyOnboarderFragment extends Fragment {
     private int iconHeight, iconWidth;
     private int marginTop, marginBottom, marginLeft, marginRight;
 
-    public AhoyOnboarderFragment() {
+    public AhoyOnboarderAdapterFragment() {
     }
 
-    public static AhoyOnboarderFragment newInstance(AhoyOnboarderCard card) {
+    public static AhoyOnboarderAdapterFragment newInstance(AhoyOnboarderCard card) {
         Bundle args = new Bundle();
         args.putString(AHOY_PAGE_TITLE, card.getTitle());
         args.putString(AHOY_PAGE_DESCRIPTION, card.getDescription());
@@ -84,7 +84,7 @@ public class AhoyOnboarderFragment extends Fragment {
         args.putInt(AHOY_PAGE_MARGIN_TOP, card.getMarginTop());
         args.putInt(AHOY_PAGE_MARGIN_BOTTOM, card.getMarginBottom());
 
-        AhoyOnboarderFragment fragment = new AhoyOnboarderFragment();
+        AhoyOnboarderAdapterFragment fragment = new AhoyOnboarderAdapterFragment();
         fragment.setArguments(args);
         return fragment;
     }

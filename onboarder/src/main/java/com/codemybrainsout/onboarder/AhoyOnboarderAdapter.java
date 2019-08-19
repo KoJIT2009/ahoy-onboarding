@@ -18,7 +18,7 @@ public class AhoyOnboarderAdapter extends FragmentStatePagerAdapter implements S
 
     private String TAG = AhoyOnboarderAdapter.class.getSimpleName();
     List<AhoyOnboarderCard> pages = new ArrayList<AhoyOnboarderCard>();
-    private List<AhoyOnboarderFragment> mFragments = new ArrayList<>();
+    private List<AhoyOnboarderAdapterFragment> mFragments = new ArrayList<>();
     private float mBaseElevation;
     private Typeface typeface;
 
@@ -38,14 +38,14 @@ public class AhoyOnboarderAdapter extends FragmentStatePagerAdapter implements S
 
     @Override
     public Fragment getItem(int position) {
-        //return AhoyOnboarderFragment.newInstance(pages.get(position));
+        //return AhoyOnboarderAdapterFragment.newInstance(pages.get(position));
         return mFragments.get(position);
     }
 
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         Object fragment = super.instantiateItem(container, position);
-        mFragments.set(position, (AhoyOnboarderFragment) fragment);
+        mFragments.set(position, (AhoyOnboarderAdapterFragment) fragment);
         return fragment;
     }
 
@@ -61,7 +61,7 @@ public class AhoyOnboarderAdapter extends FragmentStatePagerAdapter implements S
     }
 
     public void addCardFragment(AhoyOnboarderCard page) {
-        mFragments.add(AhoyOnboarderFragment.newInstance(page));
+        mFragments.add(AhoyOnboarderAdapterFragment.newInstance(page));
     }
 
     @Override
